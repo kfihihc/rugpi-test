@@ -19,9 +19,6 @@ jobs:
       - name: Prepare
         run: mkdir build
       
-      - name: Bake Image (Pi4)
-        run: ./run-bakery bake image pi4 build/pi4.img
-      
       - name: Bake Image (Tryboot)
         run: ./run-bakery bake image tryboot build/tryboot.img
 
@@ -29,4 +26,4 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: customized.img
-          path: build/customized.img
+          path: build/tryboot.img
